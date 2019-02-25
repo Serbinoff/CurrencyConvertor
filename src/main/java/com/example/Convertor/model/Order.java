@@ -2,13 +2,13 @@ package com.example.Convertor.model;
 
 public class Order {
     private Double value;
-    private Currency fromCurrency;
-    private Currency toCurrency;
+    private String fromCurrency;
+    private String toCurrency;
 
     public Order(Double value, String fromCurrency, String toCurrency) {
         this.value = value;
-        this.fromCurrency = Currency.valueOf(fromCurrency);
-        this.toCurrency = Currency.valueOf(toCurrency);
+        this.fromCurrency = fromCurrency;
+        this.toCurrency = toCurrency;
     }
 
     public double getValue() {
@@ -19,19 +19,19 @@ public class Order {
         this.value = value;
     }
 
-    public Currency getFromCurrency() {
+    public String getFromCurrency() {
         return fromCurrency;
     }
 
-    public void setFromCurrency(Currency fromCurrency) {
+    public void setFromCurrency(String fromCurrency) {
         this.fromCurrency = fromCurrency;
     }
 
-    public Currency getToCurrency() {
+    public String getToCurrency() {
         return toCurrency;
     }
 
-    public void setToCurrency(Currency toCurrency) {
+    public void setToCurrency(String toCurrency) {
         this.toCurrency = toCurrency;
     }
 }
